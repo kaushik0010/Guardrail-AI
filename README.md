@@ -66,7 +66,7 @@ In the root of the project, create a single `.env` file and populate it with you
 GUARDRAIL_INTERNAL_CEREBRAS_KEY="sk-..."
 
 # The master key for authenticating with your Guardrail service
-GUARDRAIL_MASTER_API_KEY="gr-xyz123abc-this-is-my-secret"
+GUARDRAIL_MASTER_API_KEY="HAdXvTPSHwdzOdDEr6aMxvfLMGjT75YkfxoBrT+aAFM="
 
 # Upstash credentials
 UPSTASH_REDIS_REST_URL="YOUR_URL_FROM_UPSTASH"
@@ -76,7 +76,7 @@ UPSTASH_REDIS_REST_TOKEN="YOUR_TOKEN_FROM_UPSTASH"
 CEREBRAS_API_KEY="sk-..."
 
 # The key for the consumer app to authenticate with Guardrail
-GUARDRAIL_API_KEY="gr-xyz123abc-this-is-my-secret"
+GUARDRAIL_API_KEY="HAdXvTPSHwdzOdDEr6aMxvfLMGjT75YkfxoBrT+aAFM="
 
 # The URL for the consumer app's protected route to call
 GUARDRAIL_API_URL="http://guardrail.localhost/api/guardrail/v1/chat/completions"

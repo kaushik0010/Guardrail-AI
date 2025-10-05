@@ -66,10 +66,10 @@ export const GetStartedSection = () => (
             {index === 2 && (
               <CodeBlock>
 {`# The key you get from us (Guardrail AI)
-GUARDRAIL_API_KEY="gr-xyz123abc-this-is-my-secret"
+GUARDRAIL_API_KEY="HAdXvTPSHwdzOdDEr6aMxvfLMGjT75YkfxoBrT+aAFM="
 
 # The URL for the Guardrail AI service
-GUARDRAIL_API_URL="https://your-guardrail-deployment-url/api/guardrail/v1/chat/completions"
+GUARDRAIL_API_URL="https://guardrail-ai-2trd.vercel.app/api/guard/v1/chat/completions"
 
 # Your own key for the target LLM provider
 CEREBRAS_API_KEY="sk-..."`}
