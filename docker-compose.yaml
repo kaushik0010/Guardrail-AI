@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  guardrail-ai:
+    build:
+      context: ./guardrail-ai
+      args:
+        - GUARDRAIL_INTERNAL_CEREBRAS_KEY=${GUARDRAIL_INTERNAL_CEREBRAS_KEY}
+        - UPSTASH_REDIS_REST_URL=${UPSTASH_REDIS_REST_URL}
+        - UPSTASH_REDIS_REST_TOKEN=${UPSTASH_REDIS_REST_TOKEN}
+    env_file: ./.env
+    restart: unless-stopped
+
+  consumer-app:
+    build:
+      context: ./consumer-app-demo
+      args:
+        - CEREBRAS_API_KEY=${CEREBRAS_API_KEY}
+    env_file: ./.env
+    restart: unless-stopped
+
+  gateway:
+    image: docker/mcp-gateway:latest
+    ports:
+      - "80:8080"
+    volumes:
+      - ./gateway.conf:/etc/gateway/gateway.conf:ro
+      - ./dynamic.conf:/etc/gateway/dynamic.conf:ro
+    restart: unless-stopped
