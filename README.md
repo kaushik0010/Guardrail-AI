@@ -4,7 +4,7 @@
 
 Guardrail AI is an intelligent, containerized microservice that acts as a firewall for Large Language Model (LLM) applications. It provides a robust, real-time security layer that protects against prompt injection, harmful content generation, and service abuse, all with a simple, developer-friendly integration.
 
-**[Link to Demo Video](https://drive.google.com/file/d/1jeICS0JFImIfB7JKIa0iw4_smQ7520nT/view?usp=sharing)** | **[Link to Live Demo (Consumer App)]**
+**[Link to Demo Video](https://drive.google.com/file/d/1jeICS0JFImIfB7JKIa0iw4_smQ7520nT/view?usp=sharing)** | **[Link to Live Demo ([Consumer App](https://guardrail-ai-client-demo.vercel.app/))]**
 
 ---
 
