@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 import axios, { isAxiosError } from 'axios';
 
 // The URL where your Guardrail AI Docker container will be running
-const GUARDRAIL_API_URL = process.env.GUARDRAIL_API_URL || 'http://localhost:8080/api/guard/v1/chat/completions';
+const GUARDRAIL_API_URL = process.env.GUARDRAIL_API_URL || 'https://guardrail-ai-2trd.vercel.app/v1/chat/completions';
 
 export async function POST(request: Request) {
   try {
