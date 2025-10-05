@@ -43,6 +43,22 @@ This architecture allows developers to add a powerful security layer to their ex
 
 ---
 
+## Use of Sponsor Technologies
+
+### Cerebras
+The Cerebras platform serves as the high-performance engine for our entire intelligence layer. We use it to host and run our multi-agent AI pipeline, making sequential calls to different models for Triage, Specialist analysis, and Content Safety checks. The speed of the Cerebras platform is what makes this complex, real-time security analysis viable.
+
+### Meta
+Meta's Llama models are the "brains" of our specialized security agents. We used **`Llama-3.3-70b`** for its power and reliability as our main Triage and Content Safety agent. For deep, nuanced threat analysis, we used **`Llama-4-Scout`** as our Prompt Injection Specialist.
+
+### Docker
+Docker is the foundation of our project's architecture and deployment.
+* **Dockerfiles:** We used multi-stage Dockerfiles to package our Next.js applications into lightweight, optimized, and portable containers.
+* **Docker Compose:** We used Docker Compose to orchestrate a complete, local multi-container microservices ecosystem for our demo.
+* **Docker MCP Gateway:** We used the Gateway as the central ingress and smart router for our local ecosystem, directing traffic from `demo.localhost` and `guardrail.localhost` to the correct containers, demonstrating a realistic microservice deployment pattern.
+
+---
+
 ## Local Development & Demo Setup
 
 This project runs as a local, multi-container ecosystem.
@@ -99,6 +115,8 @@ docker-compose up --build
 ```
 
 This will build the images for both applications and start all three containers.
+
+---
 
 ## How to Test the Functionalities (User Flow)
 Once the services are running, open your browser and navigate to http://demo.localhost. You will see the consumer demo application.
